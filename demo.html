@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<button onclick="display(value)" type="button" id="btn1" value="1881">1881</button>
+<button onclick="display(value)" type="button" id="btn2" value="1882">1882</button>
+<button onclick="display(value)" type="button" id="btn3" value="1883">1883</button>
+<div id="demo"></div>
+
+
+<script type="text/javascript">
+var disp =function(name,age)
+{
+	this.name=name;
+	this.age=age;
+};
+
+function display(value)
+{
+ if(value==1881)
+ { 
+ 	var stu = new disp("dfwdsc",12);
+ 	/*document.getElementById("p1").innerHTML = Person1.name;
+ 	document.getElementById("p2").innerHTML = Person1.age;*/
+ }
+ else if(value==1882)
+ {
+ 	var stu = new disp("bdvc",42);
+ 	/*document.getElementById("p1").innerHTML = Person2.name;
+ 	document.getElementById("p2").innerHTML = Person2.age;*/
+ }
+ 
+ else if(value==1883)
+ {
+ 	var stu = new disp("cfxvc",23);
+ 	/*document.getElementById("p1").innerHTML = Person3.name;
+ 	document.getElementById("p2").innerHTML = Person3.age;*/
+ 	
+ }
+ else
+ {
+
+ }
+
+document.getElementById("demo").innerHTML =
+"Name is:" + stu.name + " Age is " + stu.age;
+}
+</script>
+</body>
+</html>

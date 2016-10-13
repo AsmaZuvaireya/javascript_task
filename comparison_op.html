@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+<input type="number" name="age" placeholder="enter the age" id="age">
+<button type="button" onclick="vote()">submit</button>
+<p id="result"></p>
+<script type="text/javascript">  
+var vote=function(){
+  var input=document.getElementById("age").value;
+  var x=(input<18) ? "too young": "vote";
+  document.getElementById("result").innerHTML=x;
+  return x;
+};
+
+</script>
+</body>
+</html>

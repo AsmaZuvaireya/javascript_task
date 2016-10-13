@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<form name="my_form">
+<input type="hidden" name="url">
+</form>
+
+<form name="name1">
+First Name: <input type="text" name="fname">
+Length: <input type="text" name="fname_len">
+</form>
+<form name="name2">
+Last Name: <INPUT TYPE="text" name="lname">
+Length: <input type="text" name="lname_len">
+</form>
+
+
+<script type="text/javascript">
+
+var locate = window.location;
+document.my_form.url.value = locate;
+
+var text = document.my_form.url.value;
+
+function demo1(text)
+{
+left = text.indexOf("=") + 1;
+right = text.lastIndexOf("&");	
+var len1=text.substring(left, right).length;
+document.name1.fname_len.value = len1;
+var r=text.substring(left, right);
+var r1=r.split("").reverse().join("");
+return r1.toUpperCase();	
+
+}
+
+function demo2(text)
+{
+point = text.lastIndexOf("=");
+var len2=text.substring(point+1,text.length).length;
+document.name2.lname_len.value = len2;
+var r=text.substring(point+1,text.length);
+var r1=r.split("").reverse().join("");
+return r1.toUpperCase();	
+}
+
+var first_name = demo1(text);
+document.name1.fname.value = first_name;
+
+var last_name = demo2(text);
+document.name2.lname.value = last_name;
+
+
+</script> 
+</body>
+</html>

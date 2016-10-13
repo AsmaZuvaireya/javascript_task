@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<p id="demo"></p>
+<p id="eg"></p>
+<script type="text/javascript">
+var arr=[1,2,3];
+var arr1=["first","second","third"];
+arr=arr.concat(arr1);
+arr.push(4);
+arr.unshift(0);
+arr.pop();
+arr.shift();
+document.getElementById('demo').innerHTML=arr;
+for(i=0;i<arr.length;i++)
+{
+	console.log(arr[i]);
+}
+alert(arr.indexOf("first"));
+alert(arr.length);
+
+var person={
+	firstname:"abc",
+	lastname:"xyz",
+	age:10
+};
+document.getElementById("eg").innerHTML=person.firstname + "" + person.lastname + " age is " + person.age;
+
+var td=[[1,2],[3,4]];
+var td1=[[11,22],[33,44]];
+td=td.concat(td1);
+console.log(td[2]);
+</script>
+
+</body>
+</html>

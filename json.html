@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<div id="userdata">
+</div>
+
+<script type="text/javascript">
+
+var text = '{"person":[' +
+'{"name":"abc","address":"chennai" },' +
+'{"name":"xyz","address":"madurai" },' +
+'{"name":"jkl","address":"mdu" }]}';
+
+obj = JSON.parse(text);
+document.getElementById("userdata").innerHTML =
+obj.person[0].name + " " + obj.person[0].address +"</p> "+obj.person[1].name + " " + obj.person[1].address +" </p>"+obj.person[2].name + " " + obj.person[2].address;
+
+</script>
+</body>
+</html>
+  

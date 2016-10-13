@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+<label>Name:<input type="text" id="name"></label>
+<script type="text/javascript">
+window.onload = function() {
+
+
+  var name = sessionStorage.getItem('ss');
+
+  if (name != "undefined" || name != "null") {
+    document.getElementById("name").value = name;
+
+  }
+    else{}
+}
+</script> 
+</body>
+</html>

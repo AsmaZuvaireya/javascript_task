@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<input type='file' onchange='open_file(event)'>
+<img id='output_image' style="width: 100px; height: 100px">
+<script>
+  var open_file = function(event) {
+    var fileTypes = ['jpg', 'jpeg', 'png']; 
+    var input = event.target;
+    if (input.files && input.files[0]) {
+        var extension = input.files[0].name.split('.').pop().toLowerCase(); 
+        accept = fileTypes.indexOf(extension) > -1;  
+
+        if (accept) {  
+    var reader = new FileReader();
+    reader.onload = function(){
+      var dataURL = reader.result;
+      var output = document.getElementById('output_image');
+      output.src = dataURL;
+    }
+    reader.readAsDataURL(input.files[0]);
+  }
+  else{
+    alert("invalid file type");
+  }
+}}
+</script>
+</body>
+</html	
